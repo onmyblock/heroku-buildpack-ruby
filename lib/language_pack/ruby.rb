@@ -524,8 +524,7 @@ WARNING
             "CPATH"                         => noshellescape("#{yaml_include}:$CPATH"),
             "CPPATH"                        => noshellescape("#{yaml_include}:$CPPATH"),
             "LIBRARY_PATH"                  => noshellescape("#{yaml_lib}:$LIBRARY_PATH"),
-            "RUBYOPT"                       => syck_hack,
-            "NOKOGIRI_USE_SYSTEM_LIBRARIES" => "true"
+            "RUBYOPT"                       => syck_hack
           }
           env_vars["BUNDLER_LIB_PATH"] = "#{bundler_path}" if ruby_version.ruby_version == "1.8.7"
           puts "Running: #{bundle_command}"
